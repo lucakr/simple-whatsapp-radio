@@ -1,31 +1,40 @@
 buildscript {
+    ext.kotlin_version = '1.6.21'
     repositories {
-        jcenter();
+        jcenter()
+        google();
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.0.0'
+        classpath 'com.android.tools.build:gradle:7.3.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 apply plugin: 'com.android.application'
+apply plugin: 'org.jetbrains.kotlin.android'
 
 repositories {
-    jcenter();
+    jcenter()
+    google();
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.core:core-ktx:+'
+    implementation 'androidx.core:core-ktx:+'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 33
     
     defaultConfig {
         minSdkVersion 19
-        targetSdkVersion 29
+        targetSdkVersion 33
     }
+    namespace 'ch.arnab.simplelauncher'
 }

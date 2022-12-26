@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+
+    <Button
+        android:id="@+id/home_button"
+        style="?metaButtonBarButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:background="@color/blue_display"
+        android:text="@string/home_button"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/start_button"
+        style="?metaButtonBarButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:background="@color/green_overlay"
+        android:text="@string/start_button"
+        android:textSize="30sp" />
+
+</FrameLayout>
